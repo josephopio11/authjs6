@@ -7,7 +7,7 @@ export default async function Navbar() {
   const session = await auth();
   console.log({ session });
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between bg-slate-100 px-4 py-3">
+    <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between bg-slate-100/5 px-4 py-3 backdrop-blur-md">
       <Link href="/" className="text-xl font-bold">
         Auth.js
       </Link>
