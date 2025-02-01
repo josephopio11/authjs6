@@ -10,6 +10,8 @@ export const signInSchema = object({
     .max(32, "Password must be less than 32 characters"),
 });
 
+export type SignInSchema = typeof signInSchema;
+
 export const signUpSchema = object({
   name: string({ required_error: "Name is required" })
     .min(1, "Name is required.")
@@ -29,3 +31,13 @@ export const signUpSchema = object({
   message: "Passwords don't match",
   path: ["confirmPassword"],
 });
+
+export type SignUpSchema = typeof signUpSchema;
+
+export const forgotPasswordSchema = object({
+  email: string({ required_error: "Email is required" })
+    .min(1, "Email is required.")
+    .email("Invalid email"),
+});
+
+export type ForgotPasswordSchema = typeof forgotPasswordSchema;

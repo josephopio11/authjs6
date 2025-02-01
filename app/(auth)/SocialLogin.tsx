@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { handleGithubSignin } from "./actions";
+import { handleGithubSignin, handleGoogleSignin } from "./actions";
 
 const SocialLogin = () => {
   return (
     <>
-      <div className="flex flex-col gap-2 sm:flex-row">
+      <div className="flex flex-col gap-2">
         <form className="w-full" action={handleGithubSignin}>
           <Button variant="outline" className="w-full" type="submit">
             <FaGithub className="mr-2 h-4 w-4" />
             Sign in with GitHub
           </Button>
         </form>
-        <form className="w-full" action={handleGithubSignin}>
+        <form className="w-full" action={handleGoogleSignin}>
           <Button variant="outline" className="w-full" type="submit">
             <FcGoogle className="mr-2 h-4 w-4" />
             Sign in with Google

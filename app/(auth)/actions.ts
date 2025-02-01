@@ -32,6 +32,14 @@ export async function handleCredentialsSignin({
   }
 }
 
+export async function handlePasswordReset({ email }: { email: string }) {
+  console.log(email);
+
+  return {
+    message: email,
+  };
+}
+
 export async function handleGithubSignin() {
   await signIn("github", { redirectTo: "/" });
 }
